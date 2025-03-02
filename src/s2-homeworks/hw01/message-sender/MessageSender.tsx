@@ -73,4 +73,4 @@ const MessageSender = (props: any) => {
     )
 }
 
-export default MessageSender
+export default MessageSender;
