@@ -6,11 +6,13 @@ import s from './MessageSender.module.css'
 const MessageSender = (props: any) => {
     const M = props.M
     const textareaRef = useRef<HTMLTextAreaElement | null>(null);
-    const [messages, setMessages] = useState<any[]>([])
-    const [text, setText] = useState<any>('')
+    const [messages, setMessages] = useState<any[]>([]);
+    const [text, setText] = useState<any>('');
+    const [error, setError] = useState<string>('');
 
     const onChange = (e: any) => {
-        setText(e.currentTarget.value)
+        setText(e.currentTarget.value);
+        setError('');
     }
 
     useEffect(() => {
@@ -21,6 +23,13 @@ const MessageSender = (props: any) => {
     }, [text])
 
     const addMessage = () => {
+        if (text.trim() === '') {
+            setError('The message cannot be empty!');
+            setTimeout(() => setError(''), 2000);
+            return;
+        }
+        setError('');
+
         setMessages([
             ...messages,
             {
@@ -68,6 +77,7 @@ const MessageSender = (props: any) => {
                     Send
                     {/**/}
                 </button>
+                {error && <div className={s.error}>{error}</div>}
             </div>
         </>
     )
