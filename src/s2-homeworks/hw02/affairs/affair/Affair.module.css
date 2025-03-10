@@ -3,7 +3,7 @@
     align-items: center;
     width: 185px;
 
-    border: 1.5px solid var(--color);
+    border: 1.85px solid var(--color);
     border-radius: 5px;
 }
 
@@ -24,7 +24,7 @@
 
     background-color: transparent;
     border: none;
-    border-left: 1.5px solid var(--color);
+    border-left: 1.85px solid var(--color);
 
     font-weight: 900;
     cursor: pointer;
