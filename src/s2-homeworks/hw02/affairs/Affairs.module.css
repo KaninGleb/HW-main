@@ -35,11 +35,18 @@
     font-size: 14px;
     line-height: 20px;
     cursor: pointer;
+    transition: 0.2s;
 }
 
 .button:active {
     background: var(--color);
     color: white;
+}
+
+.button:hover:not(:active):not(.active) {
+    background: var(--color);
+    color: white;
+    transform: scale(1.05);
 }
 
 .active {
