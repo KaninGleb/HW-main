@@ -8,11 +8,11 @@ const MessageSender = (props: any) => {
     const textareaRef = useRef<HTMLTextAreaElement | null>(null);
     const [messages, setMessages] = useState<any[]>([]);
     const [text, setText] = useState<any>('');
-    const [error, setError] = useState<string>('');
+    // const [error, setError] = useState<string>('');
 
     const onChange = (e: any) => {
         setText(e.currentTarget.value);
-        setError('');
+        // setError('');
     }
 
     useEffect(() => {
@@ -24,11 +24,11 @@ const MessageSender = (props: any) => {
 
     const addMessage = () => {
         if (text.trim() === '') {
-            setError('The message cannot be empty!');
-            setTimeout(() => setError(''), 2000);
+            // setError('The message cannot be empty!');
+            // setTimeout(() => setError(''), 2000);
             return;
         }
-        setError('');
+        // setError('');
 
         setMessages([
             ...messages,
@@ -77,8 +77,8 @@ const MessageSender = (props: any) => {
                     Send
                     {/**/}
                 </button>
-                {error && <div className={s.error}>{error}</div>}
             </div>
+            {/*{error && <div className={s.error}>{error}</div>}*/}
         </>
     )
 }
