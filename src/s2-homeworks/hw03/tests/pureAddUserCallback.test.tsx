@@ -11,6 +11,7 @@ beforeEach(() => {
 })
 
 test('name 1', () => {
+    // @ts-ignore
     pureAddUserCallback('name', setName, initialState)
     expect(initialState.length).toBe(1)
     expect(initialState[0].name).toBe('name')
