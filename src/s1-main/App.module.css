@@ -3,12 +3,20 @@
 }
 
 .hw {
-    border: 1px solid #d9d9d9;
+    outline: 1px solid #d9d9d9;
     padding: 24px 70px 32px;
 }
 
 div[id='hw1'] {
-    padding: 130px 0;
+    padding-top: 108px;
+}
+
+div[id='hw2'] {
+    padding-top: 40px;
+}
+
+div[id='hw3'] {
+    padding-top: 40px;
 }
 
 .hwTitle {
