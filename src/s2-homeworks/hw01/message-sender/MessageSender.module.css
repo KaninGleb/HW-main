@@ -9,7 +9,6 @@
 .textarea {
     font-family: "Montserrat", sans-serif;
     font-size: 14px;
-    color: rgba(0, 0, 0, 0.6);
     opacity: 0.9;
 
     border-radius: 20px;
@@ -21,6 +20,10 @@
     padding: 10px 24px;
     resize: none;
     max-height: 150px;
+}
+
+.textarea::placeholder {
+    color: rgba(0, 0, 0, 0.6);
 }
 
 .button {
