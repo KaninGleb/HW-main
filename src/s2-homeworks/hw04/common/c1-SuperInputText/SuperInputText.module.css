@@ -2,19 +2,35 @@
 }
 
 .input {
+    border: 1px solid #d1d1d1;
+    border-radius: 5px;
+    padding: 5px 10px;
+    width: 372px;
+    height: 36px;
 }
 
 .inputWrapper {
+    position: relative;
 }
 
 .superInput {
 }
 
 .errorInput {
+    border: 1px solid #cc1439;
+    outline: none;
 }
 
 .errorInput:focus {
+    border: 2px solid #cc1439;
+}
+
+.spanClassName {
+    position: absolute;
+    top: -22px;
+    left: 0;
 }
 
 .error {
+    color: #cc1439;
 }
