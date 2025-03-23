@@ -19,7 +19,6 @@
     background-repeat: no-repeat;
     background-position: center center;
 
-    /* background-size: 90% 90%; */
     vertical-align: middle;
     margin-right: 8px;
     border-radius: 3px;
@@ -31,7 +30,6 @@
     appearance: none;
 
     background-image: url('checked.svg');
-    /*background: #99ff99;*/
 }
 
 .checkbox:focus {
@@ -41,4 +39,5 @@
 .spanClassName {
     font-family: 'Montserrat', sans-serif;
     color: #06c;
+    user-select: none;
 }
