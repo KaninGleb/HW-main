@@ -63,13 +63,21 @@
     border: 1px solid #2b84fc;
 }
 
-.button:active:hover {
+.button:hover {
     background-color: #2b84fc;;
+}
+
+.button:active {
+    background-color: #0066CC;
 }
 
 .button:disabled {
     opacity: 0.5;
     cursor: default;
+}
+
+.button:disabled:hover {
+    background-color: #0066CC;
 }
 
 .text {
