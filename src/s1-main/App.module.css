@@ -11,12 +11,12 @@ div[id='hw1'] {
     padding-top: 108px;
 }
 
-div[id='hw2'] {
+div[id='hw2'], div[id='hw3'] {
     padding-top: 40px;
 }
 
-div[id='hw3'] {
-    padding-top: 40px;
+div[id='hw4'] {
+    padding: 40px 0 50px;
 }
 
 .hwTitle {
