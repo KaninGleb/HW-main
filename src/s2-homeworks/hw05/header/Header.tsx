@@ -4,6 +4,7 @@ import s from './Header.module.css'
 import {useLocation} from 'react-router-dom'
 import {PATH} from '../Pages'
 
+
 type PropsType = {
     handleOpen: () => void
 }
