@@ -11,8 +11,7 @@ type PropsType = {
 }
 
 export const Sidebar: FC<PropsType> = ({open, handleOpen, handleClose}) => {
-  const sidebarClass = s.sidebar
-    + (open ? ' ' + s.open : '')
+  const sidebarClass = `${s.sidebar} ${open ? s.open : s.close}`;
 
   const handleKeyDown  = (e: KeyboardEvent) => {
     if (e.key === 'Tab') {
