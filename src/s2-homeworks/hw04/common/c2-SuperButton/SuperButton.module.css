@@ -32,7 +32,8 @@
 }
 
 .secondary {
-    width: 176px;
+    max-width: 176px;
+    width: 100%;
     border: 1px solid #06c;
     color: #06c;
     background-color: white;
