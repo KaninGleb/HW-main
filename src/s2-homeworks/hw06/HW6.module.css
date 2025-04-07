@@ -1,5 +1,13 @@
+.hw_6 {
+    padding: 70px 0;
+}
+
 .buttonsContainer {
+    display: flex;
+    gap: 24px;
+    padding-bottom: 230px;
 }
 
 .editableSpanContainer {
+    padding: 24px 0;
 }
