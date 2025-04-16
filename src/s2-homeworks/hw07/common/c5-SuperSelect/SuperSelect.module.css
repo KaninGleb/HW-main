@@ -1,9 +1,21 @@
 .select {
-}
+    font-family: "Montserrat", sans-serif;
 
-.select:focus {
-}
+    border: 1px solid #c2c2c2;
+    border-radius: 2px;
+    width: 165px;
+    height: 24px;
+    cursor: pointer;
 
+    appearance: none;
+    padding-left: 10px;
+
+    background-color: white;
+    background-image: url('chevron-down.svg');
+    background-repeat: no-repeat;
+    background-position: right 0 center;
+}
 
 .option:hover {
+    cursor: pointer;
 }
