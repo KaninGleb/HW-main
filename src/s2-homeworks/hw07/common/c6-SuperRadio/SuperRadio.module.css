@@ -1,15 +1,36 @@
 .radio {
+    appearance: none;
+    background-image: url("unchecked-radio.svg");
+    width: 24px; /* Ширина радио-кнопки */
+    height: 24px; /* Высота радио-кнопки */
+
+    cursor: pointer;
+}
+
+.radio:checked {
+    background-image: url("checked-radio.svg");
 }
 
 .radio::before {
+
 }
 
-
 .radio:checked::before {
+
 }
 
 .label {
+    font-family: "Montserrat", sans-serif;
+
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    width: fit-content;
+    cursor: pointer;
 }
 
 .options {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
 }
