@@ -9,11 +9,10 @@ import s from './HW7.module.css'
 // * 2 - в файле SuperRadio.tsx дописать логику функции onChangeCallback
 // * 3 - в файле SuperRadio.tsx дописать name, checked, value (узнать для чего в радио name)
 // * 4 - сделать стили в соответствии с дизайном
-export type ValueType = 'Pre-junior' | 'Junior'| 'Junior +';
 
 export type OptionType = {
-  id: number,
-  value: 'Pre-junior' | 'Junior'| 'Junior +'
+  id: number
+  value: any
 }
 
 const arr: OptionType[] = [
