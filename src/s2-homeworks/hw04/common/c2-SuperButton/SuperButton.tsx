@@ -18,8 +18,12 @@ const SuperButton: React.FC<SuperButtonPropsType> = (
     ...restProps // все остальные пропсы попадут в объект restProps, там же будет children
   }
 ) => {
-  const [isHovered, setIsHovered] = useState(false);
-  const [isPressed, setIsPressed] = useState(false);
+  // =================================================
+  // Extra logic - disabled
+  // const [isHovered, setIsHovered] = useState(false);
+  // const [isPressed, setIsPressed] = useState(false);
+  // =================================================
+
 
   // const finalClassName =
   //     s.button +
@@ -38,23 +42,33 @@ const SuperButton: React.FC<SuperButtonPropsType> = (
     ${disabled ? s.disabled : ''} 
     ${xType === 'red' ? s.red : xType === 'secondary' ? s.secondary : s.default}`;
 
-  const buttonText =
-    disabled ? children :
-      isPressed ? 'On Press' :
-        isHovered ? 'On Hover' : children;
+  // =================================================
+  // const buttonText =
+  //   disabled ? children : ''
+      // isPressed ? 'On Press' :
+      //   isHovered ? 'On Hover' : children;
+  // =================================================
+
 
   return (
     <button
       disabled={disabled}
       className={finalClassName}
-      onMouseEnter={() => !disabled && setIsHovered(true)}
-      onMouseLeave={() => !disabled && setIsHovered(false)}
-      onMouseDown={() => !disabled && setIsPressed(true)}
-      onMouseUp={() => !disabled && setIsPressed(false)}
+
+      // =================================================
+      // onMouseEnter={() => !disabled && setIsHovered(true)}
+      // onMouseLeave={() => !disabled && setIsHovered(false)}
+      // onMouseDown={() => !disabled && setIsPressed(true)}
+      // onMouseUp={() => !disabled && setIsPressed(false)}
+      // =================================================
 
       {...restProps} // отдаём кнопке остальные пропсы если они есть (children там внутри)
+
+      // =================================================
+      // {buttonText}
+      // =================================================
     >
-      {buttonText}
+      {children}
     </button>
   )
 }

@@ -14,6 +14,10 @@
     transition: 0.2s;
 }
 
+.button:hover {
+    scale: 1.01;
+}
+
 .default {
     width: 132px;
     background-color: #0059b2;
