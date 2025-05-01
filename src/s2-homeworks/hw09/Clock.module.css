@@ -23,6 +23,7 @@
     font-family: "Montserrat", sans-serif;
     font-size: 20px;
     display: inline;
+    cursor: default;
 }
 
 .watch strong {
@@ -31,6 +32,15 @@
 
 .moreContainer {
     position: absolute;
+    opacity: 0;
+    transform: translateY(-50%);
+    transition: .3s ease, transform .4s ease;
+}
+
+.moreContainer.visible {
+    opacity: 1;
+    transform: translateY(0%);
+
 }
 
 .more {
@@ -38,4 +48,5 @@
     color: rgba(0, 0, 0, 0.5);
     position: relative;
     top: 8px;
+    pointer-events: none;
 }

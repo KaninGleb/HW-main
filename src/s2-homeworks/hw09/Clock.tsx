@@ -52,7 +52,7 @@ function Clock() {
         <span id={'hw9-time'}><strong>{stringTime}</strong></span>
       </div>
 
-      <div id={'hw9-more'} className={s.moreContainer}>
+      <div id={'hw9-more'} className={`${s.moreContainer} ${show ? s.visible : ''}`}>
         <div className={s.more}>
           {show ? (
             <>
