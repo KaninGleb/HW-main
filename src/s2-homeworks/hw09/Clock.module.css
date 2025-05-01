@@ -3,16 +3,39 @@
 }
 
 .buttonsContainer {
+    display: flex;
+    gap: 20px;
+    margin-top: 56px;
+    max-width: 188px;
+
+    button {
+        text-transform: capitalize;
+        font-family: "Montserrat", sans-serif;
+        line-height: 1.55;
+    }
 }
 
 .clock {
+    padding-bottom: 200px;
 }
 
 .watch {
+    font-family: "Montserrat", sans-serif;
+    font-size: 20px;
+    display: inline;
 }
 
 .watch strong {
+    font-weight: 600;
+}
+
+.moreContainer {
+    position: absolute;
 }
 
 .more {
+    font-family: "Montserrat", sans-serif;
+    color: rgba(0, 0, 0, 0.5);
+    position: relative;
+    top: 8px;
 }
