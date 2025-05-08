@@ -1,5 +1,5 @@
 .button {
-    font-family: Ebrima, serif;
+    font-family: Montserrat, serif;
     letter-spacing: 1px;
     line-height: 1.42857;
     font-weight: 600;
@@ -12,6 +12,7 @@
     background-color: #0066CCFF;
     cursor: pointer;
     transition: 0.2s;
+    white-space: nowrap;
 }
 
 .button:hover {
