@@ -1,3 +1,26 @@
+.hw10 {
+    margin-top: 70px;
+}
+
+.hw {
+    outline: 1px solid #d9d9d9;
+    padding: 42px 70px 264px;
+    max-height: 336px;
+
+    button {
+        line-height: 1.5;
+        width: 100%;
+        max-width: 142px;
+    }
+}
+
 .loader {
-    /*свг и/или анимация*/
+    width: 90px;
+    height: 90px;
+}
+
+.image {
+    width: 100%;
+    height: auto;
+    transition: opacity 0.3s ease;
 }
