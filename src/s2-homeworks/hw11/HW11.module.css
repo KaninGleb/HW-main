@@ -1,8 +1,28 @@
+.hw11 {
+    margin-top: 40px;
+}
+
 .container {
+    padding: 70px 0 190px;
+
 }
 
 .wrapper {
+    display: flex;
+    align-items: center;
+    /*background: red;*/
 }
 
 .number {
+    font-family: "Montserrat", sans-serif;
+    font-weight: 600;
+    width: 28px;
+}
+
+.number:nth-child(1) {
+    margin-right: 12px;
+}
+
+.number:nth-child(3) {
+    margin-left: 22px;
 }
