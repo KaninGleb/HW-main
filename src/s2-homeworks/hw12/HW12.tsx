@@ -5,7 +5,7 @@ import SuperSelect from '../hw07/common/c5-SuperSelect/SuperSelect'
 import {useDispatch, useSelector} from 'react-redux'
 import {selectAppTheme} from './themeSelector';
 import {changeThemeId} from './bll/themeReducer'
-import {restoreState, saveState} from '../hw06/localStorage/localStorage';
+import {saveState} from '../hw06/localStorage/localStorage';
 
 
 // * 1 - в файле themeReducer.ts написать нужные типы вместо any, дописать редьюсер
@@ -43,9 +43,9 @@ const HW12 = () => {
         <SuperSelect
           id={'hw12-select-theme'}
           className={s.select}
-          // сделать переключение тем
           options={themes}
           onChangeOption={change}
+          value={themeId}
         />
       </div>
     </div>
