@@ -1,7 +1,9 @@
+import {restoreState} from '../../hw06/localStorage/localStorage';
+
 type ThemeStateType = typeof initState
 
 const initState = {
-  themeId: 1,
+  themeId: restoreState('App-Theme-Id', 1),
 }
 
 export const themeReducer = (state = initState, action: Actions): ThemeStateType => {
