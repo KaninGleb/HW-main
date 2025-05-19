@@ -1,16 +1,39 @@
+.hw12 {
+    margin-top: 40px;
+}
+
 [data-theme='1'] {
     --color: #000000;
-    --background: #FFFFFF;
+    --background: #e0e0e0;
+
+    .select {
+        background-color: var(--background);
+    }
 }
 
 [data-theme='2'] {
     --color: #000000;
     --background: #DDEEFF;
+
+    .select {
+        background-color: var(--background);
+    }
 }
 
 [data-theme='3'] {
     --color: #FFFFFF;
     --background: #212A34;
+
+    .select {
+        appearance: none;
+        color: var(--color);
+        background: var(--background) url('assets/chevron-down-outline.svg') no-repeat right 0 center;
+        border: 1px solid var(--color);
+
+        option {
+            background-color: var(--background);
+        }
+    }
 }
 
 html {
@@ -18,6 +41,23 @@ html {
     color: var(--color);
 }
 
-.select {
+.selectWrapper {
+    font-family: "Montserrat", sans-serif;
+    font-size: 14px;
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    padding-top: 34px;
+    padding-bottom: 244px;
+    margin-bottom: 50px;
+}
 
+.select {
+    font-size: 14px;
+    text-transform: capitalize;
+    border: 1px solid #323232;
+    border-radius: 2px;
+    max-width: 170px;
+    width: 100%;
+    height: 36px;
 }
