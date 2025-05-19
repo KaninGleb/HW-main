@@ -5,8 +5,16 @@
 .hw {
     outline: 1px solid #d9d9d9;
     padding: 24px 70px 32px;
-    /*padding: 0 70px;*/
 }
+
+[data-theme='2'] .hw {
+    outline-color: #a4d1ff;
+}
+
+[data-theme='3'] .hw {
+    outline-color: #384655;
+}
+
 
 div[id='hw1'], div[id='hw2'], div[id='hw3'] {
     padding-top: 70px;
@@ -20,6 +28,5 @@ div[id='hw4'] {
     font-family: "Montserrat", sans-serif;
     font-weight: 600;
     font-size: 22px;
-    color: #000;
     margin: 0 0 10px 70px;
 }
