@@ -14,6 +14,15 @@
     }
 }
 
+[data-theme='2'] .hw {
+    outline-color: #a4d1ff;
+}
+
+[data-theme='3'] .hw {
+    outline-color: #384655;
+}
+
+
 .loader {
     width: 90px;
     height: 90px;
