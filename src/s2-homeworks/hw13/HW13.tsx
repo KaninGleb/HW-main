@@ -27,10 +27,6 @@ const HW13 = () => {
         ? 'https://xxxxxx.ccc' // имитация запроса на не корректный адрес
         : 'https://samurai.it-incubator.io/api/3.0/homework/test'
 
-    // setCode('')
-    // setImage('')
-    // setText('')
-    // setInfo('...loading')
     setLoading(true)
 
     axios.post(url, { success: x }).then((res) => {
@@ -67,48 +63,30 @@ const HW13 = () => {
     })
   }
 
+  const buttons = [
+    { id: 'hw13-send-true', label: 'Send true', value: true },
+    { id: 'hw13-send-false', label: 'Send false', value: false },
+    { id: 'hw13-send-undefined', label: 'Send undefined', value: undefined },
+    { id: 'hw13-send-null', label: 'Send null', value: null },
+  ]
+
   return (
     <div id={'hw13'} className={s.hw13}>
       <div className={s2.hwTitle}>Homework #13</div>
 
       <div className={s2.hw}>
         <div className={s.buttonsContainer}>
-          <SuperButton
-            id={'hw13-send-true'}
-            onClick={send(true)}
-            xType={'secondary'}
-            // дописать
-            disabled={loading}
-          >
-            Send true
-          </SuperButton>
-          <SuperButton
-            id={'hw13-send-false'}
-            onClick={send(false)}
-            xType={'secondary'}
-            // дописать
-            disabled={loading}
-          >
-            Send false
-          </SuperButton>
-          <SuperButton
-            id={'hw13-send-undefined'}
-            onClick={send(undefined)}
-            xType={'secondary'}
-            // дописать
-            disabled={loading}
-          >
-            Send undefined
-          </SuperButton>
-          <SuperButton
-            id={'hw13-send-null'}
-            onClick={send(null)} // имитация запроса на не корректный адрес
-            xType={'secondary'}
-            // дописать
-            disabled={loading}
-          >
-            Send null
-          </SuperButton>
+          {buttons.map((btn) => (
+            <SuperButton
+              key={btn.id}
+              id={btn.id}
+              onClick={send(btn.value)}
+              xType={'secondary'}
+              disabled={loading}
+            >
+              {btn.label}
+            </SuperButton>
+          ))}
         </div>
 
         <div className={s.responseContainer}>
