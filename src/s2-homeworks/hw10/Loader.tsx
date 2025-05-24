@@ -6,11 +6,7 @@ import Ellipse4 from './assets/Ellipse4.svg'
 import s from './Loader.module.css'
 
 
-type LoaderType = {
-  timing: number
-}
-
-export const Loader = ({ timing }: LoaderType) => {
+export const Loader = () => {
   const [imageIndex, setImageIndex] = useState(0);
   const images = [
     Ellipse1,
@@ -21,8 +17,8 @@ export const Loader = ({ timing }: LoaderType) => {
 
   useEffect(() => {
     const id = setInterval(() => {
-      setImageIndex(imageIndex => imageIndex + 1)
-    }, timing / images.length)
+      setImageIndex((prevIndex) => (prevIndex + 1) % images.length)
+    }, 300)
 
     return () => clearInterval(id)
   }, []);

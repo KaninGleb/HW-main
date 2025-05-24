@@ -13,7 +13,6 @@ import s2 from '../../s1-main/App.module.css'
 // * 3 - дописать функцию setLoading
 // * 4 - сделать стили в соответствии с дизайном
 
-const LOADING_TIMING = 1500;
 
 const HW10 = () => {
   const isLoading = useSelector(selectIsLoading)
@@ -23,7 +22,7 @@ const HW10 = () => {
     dispatch(loadingAC(true))
     setTimeout(() => {
       dispatch(loadingAC(false))
-    }, LOADING_TIMING)
+    }, 1500)
   }
 
   return (
@@ -33,7 +32,7 @@ const HW10 = () => {
       <div className={`${s.hw}`}>
         {isLoading ? (
           <div id={'hw10-loading'}>
-            <Loader timing={LOADING_TIMING}/>
+            <Loader/>
           </div>
         ) : (
           <SuperButton
