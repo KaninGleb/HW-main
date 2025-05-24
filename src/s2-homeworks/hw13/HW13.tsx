@@ -7,6 +7,7 @@ import success200 from './images/200.svg'
 import error400 from './images/400.svg'
 import error500 from './images/500.svg'
 import errorUnknown from './images/error.svg'
+import {Loader} from '../hw10/Loader';
 
 
 // * 1 - дописать функцию send
@@ -18,6 +19,7 @@ const HW13 = () => {
   const [text, setText] = useState('')
   const [info, setInfo] = useState('')
   const [image, setImage] = useState('')
+  const [loading, setLoading] = useState(false)
 
   const send = (x?: boolean | null) => () => {
     const url =
@@ -25,10 +27,11 @@ const HW13 = () => {
         ? 'https://xxxxxx.ccc' // имитация запроса на не корректный адрес
         : 'https://samurai.it-incubator.io/api/3.0/homework/test'
 
-    setCode('')
-    setImage('')
-    setText('')
-    setInfo('...loading')
+    // setCode('')
+    // setImage('')
+    // setText('')
+    // setInfo('...loading')
+    setLoading(true)
 
     axios.post(url, { success: x }).then((res) => {
       setCode('Код 200!')
@@ -58,10 +61,11 @@ const HW13 = () => {
         setText(e.message);
         setInfo(e.name)
       }
+
+    }).finally(() => {
+      setLoading(false)
     })
   }
-
-  const isDisabled = info === '...loading'
 
   return (
     <div id={'hw13'} className={s.hw13}>
@@ -74,7 +78,7 @@ const HW13 = () => {
             onClick={send(true)}
             xType={'secondary'}
             // дописать
-            disabled={isDisabled}
+            disabled={loading}
           >
             Send true
           </SuperButton>
@@ -83,7 +87,7 @@ const HW13 = () => {
             onClick={send(false)}
             xType={'secondary'}
             // дописать
-            disabled={isDisabled}
+            disabled={loading}
           >
             Send false
           </SuperButton>
@@ -92,7 +96,7 @@ const HW13 = () => {
             onClick={send(undefined)}
             xType={'secondary'}
             // дописать
-            disabled={isDisabled}
+            disabled={loading}
           >
             Send undefined
           </SuperButton>
@@ -101,28 +105,34 @@ const HW13 = () => {
             onClick={send(null)} // имитация запроса на не корректный адрес
             xType={'secondary'}
             // дописать
-            disabled={isDisabled}
+            disabled={loading}
           >
             Send null
           </SuperButton>
         </div>
 
         <div className={s.responseContainer}>
-          <div className={s.imageContainer}>
-            {image && <img src={image} className={s.image} alt="status"/>}
-          </div>
+          {loading ? (
+            <Loader/>
+          ) : (
+            <>
+              <div className={s.imageContainer}>
+                {image && <img src={image} className={s.image} alt="status"/>}
+              </div>
 
-          <div className={s.textContainer}>
-            <div id={'hw13-code'} className={s.code}>
-              {code}
-            </div>
-            <div id={'hw13-text'} className={s.text}>
-              {text}
-            </div>
-            <div id={'hw13-info'} className={s.info}>
-              {info}
-            </div>
-          </div>
+              <div className={s.textContainer}>
+                <div id={'hw13-code'} className={s.code}>
+                  {code}
+                </div>
+                <div id={'hw13-text'} className={s.text}>
+                  {text}
+                </div>
+                <div id={'hw13-info'} className={s.info}>
+                  {info}
+                </div>
+              </div>
+            </>
+          )}
         </div>
       </div>
     </div>
