@@ -1,22 +1,44 @@
+.hw13 {
+    margin-bottom: 50px;
+}
+
 .buttonsContainer {
+    display: flex;
+    gap: 24px;
+    width: max-content;
 }
 
 .responseContainer {
+    font-family: "Montserrat", sans-serif;
+    font-weight: 500;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 100px;
+    height: 370px;
+    max-width: 1280px;
 }
 
 .imageContainer {
 }
 
 .image {
+    max-width: 416px;
 }
 
-.textContainer{
+.textContainer {
 }
 
 .code {
+    font-size: 30px;
+    margin-bottom: 12px;
 }
 
 .text {
+    font-size: 16px;
 }
+
 .info {
+    font-size: 16px;
 }
