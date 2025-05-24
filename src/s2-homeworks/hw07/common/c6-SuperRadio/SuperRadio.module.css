@@ -1,14 +1,28 @@
 .radio {
     appearance: none;
     background-image: url("unchecked-radio.svg");
-    width: 24px; /* Ширина радио-кнопки */
-    height: 24px; /* Высота радио-кнопки */
+    width: 24px;
+    height: 24px;
 
     cursor: pointer;
 }
 
 .radio:checked {
     background-image: url("checked-radio.svg");
+}
+
+.whiteRadio {
+    background-image: url("white-unchecked-radio.svg");
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+    width: 24px;
+    height: 24px;
+}
+
+.whiteRadio:checked {
+    background-image: url("white-checked-radio.svg");
+    background-size: contain;
 }
 
 .radio::before {

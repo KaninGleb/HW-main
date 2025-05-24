@@ -1,5 +1,7 @@
 import React, {ChangeEvent, KeyboardEvent} from 'react'
 import s from './Greeting.module.css'
+import {useSelector} from 'react-redux';
+import {selectAppTheme} from '../hw12/themeSelector';
 
 type GreetingPropsType = {
     name: string
@@ -25,11 +27,12 @@ const Greeting: React.FC<GreetingPropsType> = (
         lastUserName,
     }
 ) => {
+    const themeId = useSelector(selectAppTheme)
     const inputClass = error ? s.errorInput : s.input;
 
     return (
         <div id={'hw3-form'} className={s.greetingForm}>
-            <div className={s.text}>
+            <div className={`${s.text} ${themeId === 1 ? '' : s.whiteText}`}>
                 {'Людей добавили: '}
                 <span id={'hw3-users-total'}>
                     {totalUsers}

@@ -6,6 +6,8 @@ import React, {
 } from 'react'
 import s from './SuperRadio.module.css'
 import {OptionType} from '../../HW7';
+import {useSelector} from 'react-redux';
+import {selectAppTheme} from '../../../hw12/themeSelector';
 
 
 type DefaultRadioPropsType = DetailedHTMLProps<
@@ -36,11 +38,15 @@ const SuperRadio: React.FC<SuperRadioPropsType> = ({
     spanProps,
     ...restProps
   }) => {
+  const themeId = useSelector(selectAppTheme)
+
   const onChangeCallback = (e: ChangeEvent<HTMLInputElement>) => {
     onChangeOption && onChangeOption(+e.currentTarget.value);
   }
 
-  const finalRadioClassName = s.radio + (className ? ' ' + className : '')
+  // const finalRadioClassName = s.radio + (className ? ' ' + className : '') + themeId === 3 ? s.whiteRadio : ''
+  const finalRadioClassName = `${s.radio} ${className ? className : ''} ${themeId === 3 ? s.whiteRadio : ''}`
+
   const spanClassName = s.span + (spanProps?.className ? ' ' + spanProps.className : '')
 
   const mappedOptions: React.ReactNode[] = options
