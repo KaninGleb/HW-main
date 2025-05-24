@@ -30,22 +30,41 @@ const HW13 = () => {
     setText('')
     setInfo('...loading')
 
-    axios
-      .post(url, {success: x})
-      .then((res) => {
-        setCode('Код 200!')
-        setImage(success200)
-        // дописать
+    axios.post(url, { success: x }).then((res) => {
+      setCode('Код 200!')
+      setImage(success200)
+      // дописать
+      setText(res.data.errorText)
+      setInfo(res.data.info)
 
-      })
-      .catch((e) => {
-        // дописать
+    }).catch((e) => {
+      // дописать
+      setImage(errorUnknown)
 
-      })
+      if (e.response.data) {
+        setCode(`Ошибка ${e.response.status}!`);
+        setText(e.response.data.errorText);
+
+        if (e.response.status === 400) {
+          setImage(error400)
+          setInfo(e.response.data.info)
+        } else if (e.response.status === 500) {
+          setImage(error500)
+          setInfo(e.response.data.info)
+        }
+
+      } else {
+        setCode('Error!')
+        setText(e.message);
+        setInfo(e.name)
+      }
+    })
   }
 
+  const isDisabled = info === '...loading'
+
   return (
-    <div id={'hw13'}>
+    <div id={'hw13'} className={s.hw13}>
       <div className={s2.hwTitle}>Homework #13</div>
 
       <div className={s2.hw}>
@@ -55,7 +74,7 @@ const HW13 = () => {
             onClick={send(true)}
             xType={'secondary'}
             // дописать
-
+            disabled={isDisabled}
           >
             Send true
           </SuperButton>
@@ -64,7 +83,7 @@ const HW13 = () => {
             onClick={send(false)}
             xType={'secondary'}
             // дописать
-
+            disabled={isDisabled}
           >
             Send false
           </SuperButton>
@@ -73,7 +92,7 @@ const HW13 = () => {
             onClick={send(undefined)}
             xType={'secondary'}
             // дописать
-
+            disabled={isDisabled}
           >
             Send undefined
           </SuperButton>
@@ -82,7 +101,7 @@ const HW13 = () => {
             onClick={send(null)} // имитация запроса на не корректный адрес
             xType={'secondary'}
             // дописать
-
+            disabled={isDisabled}
           >
             Send null
           </SuperButton>
@@ -110,4 +129,4 @@ const HW13 = () => {
   )
 }
 
-export default HW13
+export default HW13;
