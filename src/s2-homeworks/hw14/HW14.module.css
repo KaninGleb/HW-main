@@ -1,7 +1,38 @@
-.tech {
+.hw14 {
+    margin-bottom: 50px;
+}
 
+.wrapper {
+    height: 280px;
+    display: inline-block;
+    --font-family: "", sans-serif;
+    line-height: 1.5;
+
+    input {
+        font-family: var(--font-family);
+        font-weight: 400;
+        font-size: 18px;
+    }
+}
+
+.inputWrapper {
+    width: 100%;
+}
+
+.techWrapper {
+    display: flex;
+    flex-direction: row-reverse;
+    margin-top: 12px;
+}
+
+.tech {
+    list-style-type: none;
 }
 
 .loading {
-
+    font-family: var(--font-family);
+    font-weight: 300;
+    font-size: 14px;
+    text-align: right;
+    width: 100%;
 }
