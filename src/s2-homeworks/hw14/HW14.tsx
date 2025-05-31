@@ -59,16 +59,16 @@ const HW14 = () => {
   }, [])
 
   const mappedTechs = techs.map(t => (
-    <div key={t} id={'hw14-tech-' + t} className={s.tech}>
+    <li key={t} id={'hw14-tech-' + t} className={s.tech}>
       {t}
-    </div>
+    </li>
   ))
 
   return (
     <div id={'hw14'} className={s.hw14}>
       <div className={s2.hwTitle}>Homework #14</div>
-        <div className={s2.hw}>
-      <div className={s.wrapper}>
+      <div className={s2.hw}>
+        <div className={s.wrapper}>
           <SuperDebouncedInput
             id={'hw14-super-debounced-input'}
             value={find}
@@ -76,11 +76,15 @@ const HW14 = () => {
             onDebouncedChange={sendQuery}
           />
 
-          <div id={'hw14-loading'} className={s.loading}>
-            {isLoading ? '...ищем' : <br/>}
-          </div>
+          <div className={s.techWrapper}>
+            <div id={'hw14-loading'} className={s.loading}>
+              {isLoading ? '...ищем' : <br/>}
+            </div>
 
-          {mappedTechs}
+            <ul>
+              {mappedTechs}
+            </ul>
+          </div>
         </div>
       </div>
     </div>
