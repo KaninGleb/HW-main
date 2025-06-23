@@ -53,23 +53,28 @@ const HW15 = () => {
           setLoading(false)
           setSearchParams({
             sort: params.sort || sort,
-            page: params.page || page,
-            count: params.count || count,
+            page: String(params.page || page),
+            count: String(params.count || count),
           })
         }
       })
   }
 
   const onChangePagination = (newPage: number, newCount: number) => {
-    // делает студент
+    setPage(newPage)
+    setCount(newCount)
 
-    // setPage(
-    // setCount(
+    sendQuery({
+      sort,
+      page: newPage,
+      count: newCount,
+    })
 
-    // sendQuery(
-    // setSearchParams(
-
-    //
+    setSearchParams({
+      sort,
+      page: String(newPage),
+      count: String(newCount),
+    })
   }
 
   const onChangeSort = (newSort: string) => {
