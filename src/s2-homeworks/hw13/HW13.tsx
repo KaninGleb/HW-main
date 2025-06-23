@@ -95,7 +95,15 @@ const HW13 = () => {
           ) : (
             <>
               <div className={s.imageContainer}>
-                {image && <img src={image} className={s.image} alt="status"/>}
+                {image &&
+                  <img
+                    src={image}
+                    className={s.image}
+                    alt="status"
+                    width={loading ? 420 : ''}
+                    height={loading ? 300 : ''}
+                  />
+                }
               </div>
 
               <div className={s.textContainer}>

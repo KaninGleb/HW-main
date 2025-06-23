@@ -21,10 +21,16 @@
 }
 
 .imageContainer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
 }
-
 .image {
-    max-width: 416px;
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    display: block;
 }
 
 .textContainer {
