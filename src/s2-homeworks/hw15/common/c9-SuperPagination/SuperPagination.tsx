@@ -33,8 +33,12 @@ const SuperPagination: React.FC<SuperPaginationPropsType> = ({
       <Pagination
         id={id + '-pagination'}
         sx={{
-          // стили для Pagination // пишет студент
+          '& button': {
+            lineHeight: '1.5'
+          }
         }}
+        shape={'rounded'}
+        color={'primary'}
         page={page}
         count={lastPage}
         onChange={onChangeCallback}
