@@ -18,12 +18,11 @@
     font-size: 14px;
     text-transform: capitalize;
     width: 50%;
-    display: flex;
-    gap: 5px;
 
     span {
         display: flex;
         align-items: center;
+        gap: 5px;
         cursor: pointer;
     }
 }
@@ -34,12 +33,11 @@
     font-size: 14px;
     text-transform: capitalize;
     width: 50%;
-    display: flex;
-    gap: 5px;
 
     span {
         display: flex;
         align-items: center;
+        gap: 5px;
         cursor: pointer;
     }
 }

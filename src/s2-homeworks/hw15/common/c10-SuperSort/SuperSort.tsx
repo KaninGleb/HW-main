@@ -43,6 +43,7 @@ const SuperSort: React.FC<SuperSortPropsType> = ({
       id={id + '-sort-' + value}
       onClick={onChangeCallback}
     >
+      <div>{value}</div>
       <img
         id={id + '-icon-' + sort}
         src={icon}
