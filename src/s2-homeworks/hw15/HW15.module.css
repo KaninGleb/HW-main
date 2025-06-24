@@ -6,7 +6,6 @@
     --font-size-row: 16px;
     --color-border: #ccc;
     --color-bg-header: #c5c5c6;
-    --color-text: #000;
 }
 
 .hw {
@@ -35,7 +34,6 @@
     font-weight: var(--font-weight-regular);
     font-size: var(--font-size-row);
     line-height: 1.5;
-    color: var(--color-text);
     padding: 12px 16px;
     display: flex;
     max-width: 606px;
