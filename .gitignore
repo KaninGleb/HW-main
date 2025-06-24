@@ -27,3 +27,5 @@ yarn-error.log*
 #tests
 babel.config.js
 __mocks__/
+__mocks__/fileMock.js
+__mocks__/svgMock.js
