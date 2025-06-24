@@ -1,12 +1,13 @@
-import React, {Fragment, useEffect, useState} from 'react'
+import React, {useEffect, useState} from 'react'
 import axios from 'axios'
-import SuperPagination from './common/c9-SuperPagination/SuperPagination'
 import {useSearchParams} from 'react-router-dom'
+import {CircularProgress} from '@mui/material';
+import SuperPagination from './common/c9-SuperPagination/SuperPagination'
 import SuperSort from './common/c10-SuperSort/SuperSort'
+import {useSelector} from 'react-redux';
+import {selectAppTheme} from '../hw12/themeSelector';
 import s2 from '../../s1-main/App.module.css'
 import s from './HW15.module.css'
-import {Loader} from '../hw10/Loader';
-import {CircularProgress, LinearProgress} from '@mui/material';
 
 
 // * 1 - дописать SuperPagination
@@ -37,6 +38,8 @@ const getTechs = (params: ParamsType) => {
 }
 
 const HW15 = () => {
+  const theme = useSelector(selectAppTheme)
+
   const [sort, setSort] = useState('')
   const [page, setPage] = useState(1)
   const [count, setCount] = useState(4)
@@ -136,7 +139,14 @@ const HW15 = () => {
               onChange={onChangePagination}
             />
 
-            <div className={s.rowHeader}>
+            <div
+              className={s.rowHeader}
+              style={{
+                backgroundColor:
+                  theme === 2 ? '#b7dbff'
+                    : theme === 3 ? '#3f4953' : ''
+              }}
+            >
               <div className={s.techHeader}>
                 <SuperSort
                   sort={sort}

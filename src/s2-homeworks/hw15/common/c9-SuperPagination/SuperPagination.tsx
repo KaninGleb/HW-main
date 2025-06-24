@@ -1,4 +1,6 @@
 import React from 'react'
+import {useSelector} from 'react-redux';
+import {selectAppTheme} from '../../../hw12/themeSelector';
 import SuperSelect from '../../../hw07/common/c5-SuperSelect/SuperSelect'
 import {Pagination} from '@mui/material'
 import s from './SuperPagination.module.css'
@@ -18,6 +20,8 @@ const SuperPagination: React.FC<SuperPaginationPropsType> = ({
     onChange,
     id = 'hw15',
   }) => {
+  const theme = useSelector(selectAppTheme)
+
   const lastPage = Math.ceil(totalCount / itemsCountForPage)
 
   const onChangeCallback = (e: any, page: number) => {
@@ -34,7 +38,11 @@ const SuperPagination: React.FC<SuperPaginationPropsType> = ({
         id={id + '-pagination'}
         sx={{
           '& button': {
-            lineHeight: '1.5'
+            lineHeight: '1.5',
+            color: theme === 3 ? 'white' : '',
+          },
+          '& div': {
+            color: theme === 3 ? 'white' : '',
           }
         }}
         shape={'rounded'}
