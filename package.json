@@ -57,9 +57,12 @@
     "@babel/preset-env": "^7.27.2",
     "@babel/preset-react": "^7.27.1",
     "@babel/preset-typescript": "^7.27.1",
-    "@types/jest": "27.5.2"
+    "@types/jest": "27.5.2",
+    "identity-obj-proxy": "^3.0.0"
   },
-  "moduleNameMapper": {
-    "\\.module\\.css$": "identity-obj-proxy"
+  "jest": {
+    "moduleNameMapper": {
+      "\\.module\\.css$": "identity-obj-proxy"
+    }
   }
 }

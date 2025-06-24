@@ -84,6 +84,9 @@ importers:
       '@types/jest':
         specifier: 27.5.2
         version: 27.5.2
+      identity-obj-proxy:
+        specifier: ^3.0.0
+        version: 3.0.0
 
 packages:
 
