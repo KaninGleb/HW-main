@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/HW-frontend-sprint-2/static/css/main.9b7cbb2f.css",
-    "main.js": "/HW-frontend-sprint-2/static/js/main.c58c03b5.js",
+    "main.css": "/HW-frontend-sprint-2/static/css/main.91b42cbe.css",
+    "main.js": "/HW-frontend-sprint-2/static/js/main.9ca6d2a0.js",
     "static/js/973.cdb859df.chunk.js": "/HW-frontend-sprint-2/static/js/973.cdb859df.chunk.js",
     "static/media/avatar.png": "/HW-frontend-sprint-2/static/media/avatar.d947cb9d0d13765666b6.png",
     "static/media/200.svg": "/HW-frontend-sprint-2/static/media/200.96248f7df0dde10e0a82ac30418f50bc.svg",
@@ -28,12 +28,12 @@
     "static/media/noneIcon.svg": "/HW-frontend-sprint-2/static/media/noneIcon.82be5adb1b751c50d996cd22beed7ded.svg",
     "static/media/downIcon.svg": "/HW-frontend-sprint-2/static/media/downIcon.84608c11f30550bbfe9dc58dff6d4ddb.svg",
     "static/media/upIcon.svg": "/HW-frontend-sprint-2/static/media/upIcon.3f53e1ada336d4a2b89dabfb878c65f9.svg",
-    "main.9b7cbb2f.css.map": "/HW-frontend-sprint-2/static/css/main.9b7cbb2f.css.map",
-    "main.c58c03b5.js.map": "/HW-frontend-sprint-2/static/js/main.c58c03b5.js.map",
+    "main.91b42cbe.css.map": "/HW-frontend-sprint-2/static/css/main.91b42cbe.css.map",
+    "main.9ca6d2a0.js.map": "/HW-frontend-sprint-2/static/js/main.9ca6d2a0.js.map",
     "973.cdb859df.chunk.js.map": "/HW-frontend-sprint-2/static/js/973.cdb859df.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.9b7cbb2f.css",
-    "static/js/main.c58c03b5.js"
+    "static/css/main.91b42cbe.css",
+    "static/js/main.9ca6d2a0.js"
   ]
 }
