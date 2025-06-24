@@ -1,61 +1,17 @@
+:root {
+    --font-family: 'Roboto', sans-serif;
+    --font-weight-regular: 400;
+    --font-weight-bold: 600;
+    --font-size-header: 14px;
+    --font-size-row: 16px;
+    --color-border: #ccc;
+    --color-bg-header: #c5c5c6;
+    --color-text: #000;
+}
+
 .hw {
     padding-bottom: 48px;
     margin-bottom: 100px;
-}
-
-.tech {
-    width: 50%;
-}
-
-.developer {
-    width: 50%;
-    text-transform: capitalize;
-}
-
-.techHeader {
-    font-family: "Roboto", sans-serif;
-    font-weight: 600;
-    font-size: 14px;
-    text-transform: capitalize;
-    width: 50%;
-
-    span {
-        display: flex;
-        align-items: center;
-        gap: 5px;
-        cursor: pointer;
-    }
-}
-
-.developerHeader {
-    font-family: "Roboto", sans-serif;
-    font-weight: 600;
-    font-size: 14px;
-    text-transform: capitalize;
-    width: 50%;
-
-    span {
-        display: flex;
-        align-items: center;
-        gap: 5px;
-        cursor: pointer;
-    }
-}
-
-.row {
-    font-family: "Roboto", sans-serif;
-    font-weight: 400;
-    font-size: 16px;
-    line-height: 1.5;
-    color: #000;
-    padding: 12px 16px;
-    display: flex;
-    max-width: 606px;
-    border-bottom: 1px solid #ccc;
-}
-
-.row:last-of-type {
-    border-bottom: none;
 }
 
 .wrapper {
@@ -63,23 +19,59 @@
     max-width: 606px;
 }
 
-.rowHeader {
-    display: flex;
-    padding: 10px 16px;
-    background-color: #C5C5C6;
-    margin-top: 36px;
-}
-
 .loading {
     position: absolute;
-    top: 0;
-    left: 0;
+    top: 0; left: 0;
     width: 100%;
     height: 100%;
-
     display: flex;
     justify-content: center;
     align-items: center;
-
     stroke-linecap: round;
+}
+
+.row {
+    font-family: var(--font-family), sans-serif;
+    font-weight: var(--font-weight-regular);
+    font-size: var(--font-size-row);
+    line-height: 1.5;
+    color: var(--color-text);
+    padding: 12px 16px;
+    display: flex;
+    max-width: 606px;
+    border-bottom: 1px solid var(--color-border);
+
+    &:last-of-type {
+        border-bottom: none;
+    }
+
+    .tech, .developer {
+        width: 50%;
+    }
+
+    .developer {
+        text-transform: capitalize;
+    }
+}
+
+.rowHeader {
+    display: flex;
+    padding: 10px 16px;
+    background-color: var(--color-bg-header);
+    margin-top: 36px;
+
+    .techHeader, .developerHeader {
+        font-family: var(--font-family), sans-serif;
+        font-weight: var(--font-weight-bold);
+        font-size: var(--font-size-header);
+        text-transform: capitalize;
+        width: 50%;
+
+        span {
+            display: flex;
+            align-items: center;
+            gap: 5px;
+            cursor: pointer;
+        }
+    }
 }
