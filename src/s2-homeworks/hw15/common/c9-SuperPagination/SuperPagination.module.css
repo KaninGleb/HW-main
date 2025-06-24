@@ -1,9 +1,24 @@
 .pagination {
+    font-family: "Roboto", sans-serif;
+    font-size: 14px;
     display: flex;
+    align-items: center;
+    gap: 10px;
+
+    select {
+        font-family: "Roboto", sans-serif;
+        font-weight: 400;
+        font-size: 14px;
+        color: #0d0b0c;
+        max-width: 46px;
+        padding: 4px 6px;
+        border: 1px solid #ecebeb;
+        border-radius: 2px;
+    }
 }
 
 .text1 {
-
+    text-transform: capitalize;
 }
 
 .text2 {
