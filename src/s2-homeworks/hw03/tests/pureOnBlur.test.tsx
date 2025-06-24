@@ -1,4 +1,3 @@
-import React from 'react'
 import {pureOnBlur} from '../GreetingContainer'
 
 let name: any
@@ -20,10 +19,10 @@ test('name 1', () => {
 test('name 2', () => {
     name = ''
     pureOnBlur(name, setError)
-    expect(error).toBe('Ошибка! Введите имя!')
+    expect(error).toBe('Mistake! Enter a name!')
 })
 test('name 3', () => {
     name = '    '
     pureOnBlur(name, setError)
-    expect(error).toBe('Ошибка! Введите имя!')
+    expect(error).toBe('Mistake! Enter a name!')
 })
