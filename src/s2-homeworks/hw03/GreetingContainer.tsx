@@ -13,7 +13,7 @@ export const pureAddUser = (
     setName: Dispatch<SetStateAction<string>>,
     addUserCallback: (name: string) => void
 ) => {
-    if (name === '') {
+    if (name.trim() === '') {
         setError('Mistake! Enter a name!');
     } else {
         addUserCallback(name);
